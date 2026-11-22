@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart FootEnergy - AI Footstep Power</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Arial;margin:0;background:#0a0f1e;color:white;text-align:center}
+.header{background:linear-gradient(135deg,#00ff88,#00bfff);padding:50px 20px;color:#000}
+.header h1{font-size:42px;margin:0}
+.header p{font-size:18px}
+.box{background:#1a2340;margin:20px;padding:25px;border-radius:15px}
+h2{color:#00ff88}
+.btn{background:#00ff88;color:black;padding:15px 30px;border:none;border-radius:30px;font-size:18px;font-weight:bold;cursor:pointer}
+.card{display:inline-block;background:white;color:black;padding:20px;margin:10px;border-radius:15px;width:200px}
+.card b{font-size:28px;color:#007bff}
+footer{padding:20px;color:#aaa}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>⚡ SMART FOOTENERGY</h1>
+<p><b>AI Smart Footsteps to Generate Electricity</b></p>
+<p>Every Step You Take Can Light Up The Future</p>
+<button class="btn" onclick="addStep()">👣 TAP TO STEP - GENERATE POWER</button>
+</div>
+
+<div class="box">
+<h2>🔴 LIVE DASHBOARD</h2>
+<div class="card"><b id="steps">0</b><br>Steps Today</div>
+<div class="card"><b id="volts">0 V</b><br>Voltage</div>
+<div class="card"><b id="watts">0 W</b><br>Power Generated</div>
+<div class="card"><b id="lights">0</b><br>LEDs Powered</div>
+</div>
+
+<div class="box">
+<h2>⚙️ How It Works</h2>
+<p>1. STEP 👣 → 2. PRESSURE → 3. PIEZO SENSOR → 4. ELECTRICITY ⚡ → 5. BATTERY → 6. LED LIGHT 💡</p>
+<p>Piezoelectric Sensors + ESP32 + AI = Smart FootEnergy</p>
+</div>
+
+<div class="box">
+<h2>🏙️ Where To Use?</h2>
+<p>Railway Stations | Schools | Colleges | Malls | Temples | Smart City Roads</p>
+<h2>♻️ Benefits</h2>
+<p>100% Clean Energy | No Pollution | Low Cost Rs. 2000 | Best for Smart City India</p>
+</div>
+
+<div class="box">
+<h2>👥 Team - EcoSmart Bharath</h2>
+<p><b>Project:</b> Smart FootEnergy<br>
+<b>Location:</b> Vellore, Tamil Nadu, India<br>
+<b>GitHub:</b> rukashini2008</p>
+</div>
+
+<footer>Made with ❤️ by EcoSmart Bharath | Smart FootEnergy 2026</footer>
+
+<script>
+let s=1248;
+function addStep(){
+ s++;
+ let v=(s*0.02).toFixed(1);
+ let w=(s*0.05).toFixed(1);
+ document.getElementById("steps").innerText=s;
+ document.getElementById("volts").innerText=v+" V";
+ document.getElementById("watts").innerText=w+" W";
+ document.getElementById("lights").innerText=Math.floor(s/100);
+}
+addStep();
+setInterval(addStep, 3000);
+</script>
+
+</body>
+</html>
